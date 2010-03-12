@@ -1,0 +1,20 @@
+mod_virtualroot - apache module to allow dynamic document roots. 
+
+This module is similar to mod_vhost_alias's VirtualDocumentRoot, but alters
+Apache's internal document root, rather than translating the current script
+filename. This makes it more useful in scripting languages which need the base
+path.
+
+It also includes optional domain suffix stripping, giving the ability to reuse
+the vhost under different sub-domains.
+
+Installation
+------------
+make install
+cp virtualroot.conf /etc/httpd/conf.d/
+
+Usage
+-----
+VirtualRoot Path
+VirtualRootDomain Domain1 ... [DomainN]
+ 
